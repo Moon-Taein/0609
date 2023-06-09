@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Main10 {
 	public static void main(String[] args) {
@@ -31,7 +32,7 @@ public class Main10 {
 
 		try {
 			// Files.copy ( 원본경로, 새경로 );
-			Files.copy(p, newFolder.resolve("newfilename.txt"));
+			Files.copy(p, newFolder.resolve("newfilename.txt"), StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("복사에 실패하였습니다.");
