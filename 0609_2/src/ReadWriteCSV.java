@@ -81,9 +81,9 @@ public class ReadWriteCSV {
 	// 추가
 	public void appendRow() {
 		List<String> tempList = new ArrayList<>();
-		System.out.println("추가할 코드를 입력하세요(입력예: \"code, country, area, capital, population\"");
+		System.out.println("추가할 코드를 입력하세요( 입력예: code,country,area,capital,population )");
 		String code = SCAN.nextLine();
-		String[] codeList = code.split(", ");
+		String[] codeList = code.split(",");
 		for (int i = 0; i < codeList.length; i++) {
 			tempList.add(codeList[i]);
 		}
